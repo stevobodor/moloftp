@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a reproducible problem with MoloFTP.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "For purchase or license support, email support@moloftp.com. Never include passwords, license keys or private server details in a public issue."
+  - type: input
+    id: app-version
+    attributes:
+      label: Molo version
+      description: Find this in Molo → About Molo.
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+    validations:
+      required: true
+  - type: dropdown
+    id: protocol
+    attributes:
+      label: Protocol
+      options:
+        - FTP
+        - FTPS
+        - SFTP
+        - Not related to a connection
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Describe the actions that trigger the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or error message
+      description: Optional. Remove credentials and private information before sharing.
